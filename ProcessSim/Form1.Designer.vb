@@ -30,7 +30,10 @@ Partial Class Form1
         Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Hysteresis = New System.Windows.Forms.TrackBar()
+        Me.q = New System.Windows.Forms.Label()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Hysteresis, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Setpoint
@@ -105,11 +108,31 @@ Partial Class Form1
         Me.Button1.Text = "Increase"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Hysteresis
+        '
+        Me.Hysteresis.Location = New System.Drawing.Point(108, 147)
+        Me.Hysteresis.Maximum = 100
+        Me.Hysteresis.Name = "Hysteresis"
+        Me.Hysteresis.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.Hysteresis.Size = New System.Drawing.Size(45, 177)
+        Me.Hysteresis.TabIndex = 9
+        '
+        'q
+        '
+        Me.q.AutoSize = True
+        Me.q.Location = New System.Drawing.Point(98, 131)
+        Me.q.Name = "q"
+        Me.q.Size = New System.Drawing.Size(55, 13)
+        Me.q.TabIndex = 10
+        Me.q.Text = "Hysteresis"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.q)
+        Me.Controls.Add(Me.Hysteresis)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TrackBar1)
@@ -121,6 +144,7 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "Process Simulator"
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Hysteresis, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -133,4 +157,6 @@ Partial Class Form1
     Friend WithEvents TrackBar1 As TrackBar
     Friend WithEvents Label4 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents Hysteresis As TrackBar
+    Friend WithEvents q As Label
 End Class

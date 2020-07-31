@@ -17,9 +17,14 @@
 
     Private Sub TrackBar1_ValueChanged(sender As Object, e As EventArgs) Handles TrackBar1.ValueChanged
         Label2.Text = TrackBar1.Value
-        If TrackBar1.Value < Setpoint.Text Then
+        If TrackBar1.Value < (Setpoint.Text - Hysteresis.Value) Then
             PumpOn.Checked = True
         Else
+            PumpOn.Checked = False
+
+        End If
+
+        If TrackBar1.Value > Setpoint.Text Then
             PumpOn.Checked = False
 
         End If
