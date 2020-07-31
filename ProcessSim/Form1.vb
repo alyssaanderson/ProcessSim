@@ -19,15 +19,13 @@
         Label2.Text = TrackBar1.Value
         If TrackBar1.Value < (Setpoint.Text - Hysteresis.Value) Then
             PumpOn.Checked = True
-        Else
+        ElseIf TrackBar1.Value > (Setpoint.Text + Hysteresis.Value) Then
+
             PumpOn.Checked = False
 
         End If
 
-        If TrackBar1.Value > Setpoint.Text Then
-            PumpOn.Checked = False
 
-        End If
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
