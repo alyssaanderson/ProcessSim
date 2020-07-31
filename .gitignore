@@ -339,3 +339,4 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 /ProcessSim/procsim.zip
+/ProcessSim/procsim
