@@ -94,7 +94,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Process Simulator"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
