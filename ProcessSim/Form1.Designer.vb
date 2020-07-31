@@ -35,8 +35,14 @@ Partial Class Form1
         Me.q = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.HystLab = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.PumpSpeed = New System.Windows.Forms.TrackBar()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.OutflowRate = New System.Windows.Forms.TrackBar()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Hysteresis, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PumpSpeed, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OutflowRate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Setpoint
@@ -111,6 +117,7 @@ Partial Class Form1
         Me.Button1.TabIndex = 8
         Me.Button1.Text = "Increase"
         Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
         '
         'Hysteresis
         '
@@ -143,11 +150,55 @@ Partial Class Form1
         Me.HystLab.TabIndex = 11
         Me.HystLab.Text = "0"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(616, 51)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(68, 13)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Pump Speed"
+        '
+        'PumpSpeed
+        '
+        Me.PumpSpeed.Location = New System.Drawing.Point(632, 71)
+        Me.PumpSpeed.Maximum = 6
+        Me.PumpSpeed.Minimum = 1
+        Me.PumpSpeed.Name = "PumpSpeed"
+        Me.PumpSpeed.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.PumpSpeed.Size = New System.Drawing.Size(45, 145)
+        Me.PumpSpeed.TabIndex = 12
+        Me.PumpSpeed.Value = 2
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(694, 51)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(97, 13)
+        Me.Label6.TabIndex = 15
+        Me.Label6.Text = "Tank Outflow Rate"
+        '
+        'OutflowRate
+        '
+        Me.OutflowRate.Location = New System.Drawing.Point(710, 71)
+        Me.OutflowRate.Maximum = 5
+        Me.OutflowRate.Minimum = 1
+        Me.OutflowRate.Name = "OutflowRate"
+        Me.OutflowRate.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.OutflowRate.Size = New System.Drawing.Size(45, 145)
+        Me.OutflowRate.TabIndex = 14
+        Me.OutflowRate.Value = 1
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.OutflowRate)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.PumpSpeed)
         Me.Controls.Add(Me.HystLab)
         Me.Controls.Add(Me.q)
         Me.Controls.Add(Me.Hysteresis)
@@ -163,6 +214,8 @@ Partial Class Form1
         Me.Text = "Process Simulator"
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Hysteresis, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PumpSpeed, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OutflowRate, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -179,4 +232,8 @@ Partial Class Form1
     Friend WithEvents q As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents HystLab As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents PumpSpeed As TrackBar
+    Friend WithEvents Label6 As Label
+    Friend WithEvents OutflowRate As TrackBar
 End Class
