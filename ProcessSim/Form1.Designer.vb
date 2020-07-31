@@ -34,6 +34,7 @@ Partial Class Form1
         Me.Hysteresis = New System.Windows.Forms.TrackBar()
         Me.q = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.HystLab = New System.Windows.Forms.Label()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Hysteresis, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -133,11 +134,21 @@ Partial Class Form1
         '
         Me.Timer1.Enabled = True
         '
+        'HystLab
+        '
+        Me.HystLab.AutoSize = True
+        Me.HystLab.Location = New System.Drawing.Point(140, 203)
+        Me.HystLab.Name = "HystLab"
+        Me.HystLab.Size = New System.Drawing.Size(13, 13)
+        Me.HystLab.TabIndex = 11
+        Me.HystLab.Text = "0"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.HystLab)
         Me.Controls.Add(Me.q)
         Me.Controls.Add(Me.Hysteresis)
         Me.Controls.Add(Me.Button1)
@@ -167,4 +178,5 @@ Partial Class Form1
     Friend WithEvents Hysteresis As TrackBar
     Friend WithEvents q As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents HystLab As Label
 End Class

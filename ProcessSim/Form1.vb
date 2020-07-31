@@ -40,4 +40,9 @@
         End If
 
     End Sub
+
+    Private Sub Hysteresis_ValueChanged(sender As Object, e As EventArgs) Handles Hysteresis.ValueChanged
+        HystLab.Text = Hysteresis.Value
+
+    End Sub
 End Class
