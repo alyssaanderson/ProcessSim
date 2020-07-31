@@ -91,6 +91,7 @@ Partial Class Form1
         Me.TrackBar1.Orientation = System.Windows.Forms.Orientation.Vertical
         Me.TrackBar1.Size = New System.Drawing.Size(45, 145)
         Me.TrackBar1.TabIndex = 6
+        Me.TrackBar1.Value = 50
         '
         'Label4
         '
@@ -113,7 +114,7 @@ Partial Class Form1
         'Hysteresis
         '
         Me.Hysteresis.Location = New System.Drawing.Point(108, 147)
-        Me.Hysteresis.Maximum = 100
+        Me.Hysteresis.Maximum = 20
         Me.Hysteresis.Name = "Hysteresis"
         Me.Hysteresis.Orientation = System.Windows.Forms.Orientation.Vertical
         Me.Hysteresis.Size = New System.Drawing.Size(45, 177)
