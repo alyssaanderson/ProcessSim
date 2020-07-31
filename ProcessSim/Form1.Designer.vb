@@ -22,28 +22,29 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Setpoint = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.PumpOn = New System.Windows.Forms.CheckBox()
         Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'Setpoint
         '
-        Me.TextBox1.Location = New System.Drawing.Point(110, 44)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(172, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.Setpoint.Location = New System.Drawing.Point(110, 44)
+        Me.Setpoint.Name = "Setpoint"
+        Me.Setpoint.Size = New System.Drawing.Size(39, 20)
+        Me.Setpoint.TabIndex = 1
+        Me.Setpoint.Text = "50"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(288, 47)
+        Me.Label1.Location = New System.Drawing.Point(152, 47)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(46, 13)
         Me.Label1.TabIndex = 2
@@ -61,21 +62,21 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(291, 71)
+        Me.Label3.Location = New System.Drawing.Point(155, 71)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(86, 13)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Process Variable"
         '
-        'CheckBox1
+        'PumpOn
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(295, 156)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(70, 17)
-        Me.CheckBox1.TabIndex = 5
-        Me.CheckBox1.Text = "Pump On"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.PumpOn.AutoSize = True
+        Me.PumpOn.Location = New System.Drawing.Point(295, 156)
+        Me.PumpOn.Name = "PumpOn"
+        Me.PumpOn.Size = New System.Drawing.Size(70, 17)
+        Me.PumpOn.TabIndex = 5
+        Me.PumpOn.Text = "Pump On"
+        Me.PumpOn.UseVisualStyleBackColor = True
         '
         'TrackBar1
         '
@@ -112,11 +113,11 @@ Partial Class Form1
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TrackBar1)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.PumpOn)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Setpoint)
         Me.Name = "Form1"
         Me.Text = "Process Simulator"
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -124,11 +125,11 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Setpoint As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents PumpOn As CheckBox
     Friend WithEvents TrackBar1 As TrackBar
     Friend WithEvents Label4 As Label
     Friend WithEvents Button1 As Button
